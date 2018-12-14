@@ -1,10 +1,10 @@
 
-import Dashboard from '../routes/dashboard/dashboard';
+import Dashboard from '../routes/dashboard';
 
 
 export default [
 	{
-		path: 'dashboard',
+		path: '',
 		component: Dashboard
 	}
 ]

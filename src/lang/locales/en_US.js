@@ -743,5 +743,10 @@ module.exports = {
 	"button.useDefaultImage": "Use Default Image",
 	"button.cropImage": "Crop Image",
 	"widgets.preview": "Preview",
-	"widgets.croppedImage":"Cropped Image"
+	"widgets.croppedImage":"Cropped Image",
+    "Xem thống kê" :"Xem thống kê",
+	"Video" : "Video",
+    "Quản lý cảnh báo" : "Quản lý cảnh báo",
+    "Quản lý sai phạm" : "Quản lý sai phạm"
+
 }
