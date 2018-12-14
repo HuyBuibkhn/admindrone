@@ -20,6 +20,7 @@ import RctDefaultLayout from './DefaultLayout';
 
 // boxed layout
 import RctBoxedLayout from './RctBoxedLayout';
+import VideoLayout from "./VideoLayout";
 
 /**
  * Initial Path To Check Whether User Is Logged In Or Not
@@ -33,7 +34,9 @@ const InitialPath = ({ component: Component, ...rest }) =>
 class App extends Component {
 	render() {
 		const { location, match, user } = this.props;
+		console.log('match', match);
 		if (location.pathname === '/') {
+			// return <Redirect to={'/app/dashboard/ecommerce'} />;
 			return <Redirect to={'/app/dashboard/ecommerce'} />;
 		}
 		return (
@@ -47,6 +50,7 @@ class App extends Component {
 				<Route path="/horizontal" component={HorizontalLayout} />
 				<Route path="/agency" component={AgencyLayout} />
 				<Route path="/boxed" component={RctBoxedLayout} />
+				<Route path='/video' component={VideoLayout}/>
 			</RctThemeProvider>
 		);
 	}
