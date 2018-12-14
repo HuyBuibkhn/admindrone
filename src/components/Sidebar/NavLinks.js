@@ -23,7 +23,7 @@ export default {
         {
             "menu_title": "Quản lý cảnh báo",
             "menu_icon": "zmdi zmdi-view-dashboard",
-            "path": "/app/dashboard/report"
+            "path": "/app/dashboard/lala"
         },
 
         {

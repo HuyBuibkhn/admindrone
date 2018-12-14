@@ -35,16 +35,11 @@ const AsyncDashboardComponent = Loadable({
     loader: () => import("Routes/dashboard/dashboard/dashboard"),
     loading: () => <RctPageLoader />,
 });
-const AsyncReportComponent = Loadable({
-    loader: () => import("Routes/dashboard/report/report"),
-    loading: () => <RctPageLoader />,
-});
 
 export {
 	AsyncEcommerceDashboardComponent,
 	AsyncSaasDashboardComponent,
 	AsyncAgencyDashboardComponent,
 	AsyncNewsDashboardComponent,
-    AsyncDashboardComponent,
-    AsyncReportComponent
+    AsyncDashboardComponent
 };

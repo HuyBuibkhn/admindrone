@@ -9,7 +9,7 @@ import {
     AsyncEcommerceDashboardComponent,
     AsyncSaasDashboardComponent,
     AsyncAgencyDashboardComponent,
-    AsyncNewsDashboardComponent, AsyncDashboardComponent, AsyncReportComponent
+    AsyncNewsDashboardComponent, AsyncDashboardComponent
 } from 'Components/AsyncComponent/AsyncComponent';
 
 const Dashboard = ({ match }) => (
@@ -17,7 +17,6 @@ const Dashboard = ({ match }) => (
       <Switch>
 
           <Route path={`${match.url}/dashboard`} component={AsyncDashboardComponent} />
-          <Route path={`${match.url}/report`} component={AsyncReportComponent} />
          <Route path={`${match.url}/ecommerce`} component={AsyncEcommerceDashboardComponent} />
          <Route path={`${match.url}/saas`} component={AsyncSaasDashboardComponent} />
          <Route path={`${match.url}/agency`} component={AsyncAgencyDashboardComponent} />

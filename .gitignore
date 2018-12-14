@@ -21,6 +21,3 @@ yarn-debug.log*
 yarn-error.log*
 *.xml
 *.iml
-*.json
-package.json
-package-lock.json
