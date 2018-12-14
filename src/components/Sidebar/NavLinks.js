@@ -2,10 +2,9 @@
 export default {
 	category1: [
 		{
-			"menu_title": "Xem trực tiếp video",
+			"menu_title": "Xem thống kê",
 			"menu_icon": "zmdi zmdi-view-dashboard",
-			"child_routes": [
-			]
+            "path": "/app/dashboard/dashboard"
 		},
         {
             "menu_title": "Quản lý video",

@@ -31,10 +31,15 @@ const AsyncNewsDashboardComponent = Loadable({
 	loader: () => import("Routes/dashboard/news"),
 	loading: () => <RctPageLoader />,
 });
+const AsyncDashboardComponent = Loadable({
+    loader: () => import("Routes/dashboard/dashboard/dashboard"),
+    loading: () => <RctPageLoader />,
+});
 
 export {
 	AsyncEcommerceDashboardComponent,
 	AsyncSaasDashboardComponent,
 	AsyncAgencyDashboardComponent,
-	AsyncNewsDashboardComponent
+	AsyncNewsDashboardComponent,
+    AsyncDashboardComponent
 };

@@ -6,16 +6,17 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 
 // async components
 import {
-   AsyncEcommerceDashboardComponent,
-   AsyncSaasDashboardComponent,
-   AsyncAgencyDashboardComponent,
-   AsyncNewsDashboardComponent
+    AsyncEcommerceDashboardComponent,
+    AsyncSaasDashboardComponent,
+    AsyncAgencyDashboardComponent,
+    AsyncNewsDashboardComponent, AsyncDashboardComponent
 } from 'Components/AsyncComponent/AsyncComponent';
 
 const Dashboard = ({ match }) => (
    <div className="dashboard-wrapper">
       <Switch>
-         <Redirect exact from={`${match.url}/`} to={`${match.url}/admin`} />
+
+          <Route path={`${match.url}/dashboard`} component={AsyncDashboardComponent} />
          <Route path={`${match.url}/ecommerce`} component={AsyncEcommerceDashboardComponent} />
          <Route path={`${match.url}/saas`} component={AsyncSaasDashboardComponent} />
          <Route path={`${match.url}/agency`} component={AsyncAgencyDashboardComponent} />
