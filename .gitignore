@@ -24,3 +24,7 @@ yarn-error.log*
 *.json
 package.json
 package-lock.json
+
+/.idea
+**.idea/**.idea
+.idea

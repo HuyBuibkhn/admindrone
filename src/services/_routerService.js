@@ -1,5 +1,5 @@
 
-import Dashboard from 'Routes/dashboard';
+import Dashboard from '../routes/dashboard/dashboard';
 
 
 export default [
