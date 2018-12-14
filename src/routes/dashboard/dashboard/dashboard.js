@@ -14,6 +14,8 @@ class dashboard extends Component {
                 {name: '4/2018', uv: 27, pv: 39, amt: 20},
                 {name: '5/2018', uv: 19, pv: 48, amt: 21},
                 {name: '6/2018', uv: 23, pv: 38, amt: 25},
+                {name: '7/2018', uv: 34, pv: 43, amt: 21},
+                {name: '8/2018', uv: 34, pv: 43, amt: 21},
                 {name: '9/2018', uv: 34, pv: 43, amt: 21},
                 {name: '10/2018', uv: 34, pv: 43, amt: 21},
                 {name: '11/2018', uv: 34, pv: 43, amt: 21},
@@ -26,8 +28,8 @@ class dashboard extends Component {
                 {name: '4/2018', uv: 2, pv: 3, amt: 2},
                 {name: '5/2018', uv: 1, pv: 4, amt: 2},
                 {name: '6/2018', uv: 2, pv: 3, amt: 2},
-                {name: '7/2018', uv: 3, pv: 4, amt: 2},
-                {name: '8/2018', uv: 3, pv: 4, amt: 1},
+                {name: '7/2018', uv: 1, pv: 4, amt: 2},
+                {name: '8/2018', uv: 2, pv: 3, amt: 2},
                 {name: '9/2018', uv: 3, pv: 4, amt: 2},
                 {name: '10/2018', uv: 3, pv: 4, amt: 1},
                 {name: '11/2018', uv: 3, pv: 4, amt: 2},
@@ -167,7 +169,7 @@ class dashboard extends Component {
                             <Tooltip/>
                             <Legend />
                             <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/>
-                            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                            {/*<Line type="monotone" dataKey="uv" stroke="#82ca9d" />*/}
                         </LineChart>
                     </ResponsiveContainer>
                 </div>
