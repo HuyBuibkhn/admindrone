@@ -7,18 +7,12 @@ export default {
             "path": "/app/dashboard/dashboard"
 		},
         {
-            "menu_title": "Quản lý video",
+            "menu_title": "Video",
             "menu_icon": "zmdi zmdi-view-dashboard",
-            "child_routes": [
-                {
-                    "menu_title": "Xem video theo ngày",
-                    "path": "/app/dashboard/ecommerce",
-                },
-                {
-                    "path": "/horizontal/dashboard/saas",
-                    "menu_title": "Xem video theo drone"
-                }
-            ]
+            "path": "/video",
+            // "child_routes": [
+            //
+            // ]
         },
         {
             "menu_title": "Quản lý cảnh báo",
@@ -31,6 +25,6 @@ export default {
             "menu_icon": "zmdi zmdi-view-dashboard",
             "child_routes": [
             ]
-        }
+		}
 	]
 }

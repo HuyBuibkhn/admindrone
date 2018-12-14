@@ -33,7 +33,7 @@ class NavMenuItem extends Component {
                 <Fragment>
                     <ListItem button component="li" onClick={onToggleMenu} className={`list-item ${classNames({ 'item-active': menu.open })}`}>
                         <ListItemIcon className="menu-icon">
-                            <i className={menu.menu_icon}></i>
+                            <i className={menu.menu_icon}/>
                         </ListItemIcon>
                         <span className="menu">
                             <IntlMessages id={menu.menu_title} />

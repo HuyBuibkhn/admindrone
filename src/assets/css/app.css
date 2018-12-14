@@ -1,0 +1,51 @@
+td {
+    border: 1px solid gray;
+    padding-left: 10px;
+}
+
+body {
+    background-color: white;
+}
+
+.warning-table {
+
+}
+
+.warning-table td{
+    border: 1px solid gray;
+    padding-left: 10px;
+}
+
+.warning-table th {
+    border: 1px solid gray;
+    padding-left: 10px;
+}
+
+/*.warning-table  {*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+    /*width: 100%;*/
+/*}*/
+
+.stt {
+    width: 10%;
+}
+
+.warning-table .content {
+    width: 60%;
+}
+
+.warning-table .time {
+    width: 30%;
+}
+
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

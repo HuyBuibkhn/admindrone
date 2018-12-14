@@ -6,6 +6,8 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // Save a reference to the root element for reuse
 const rootEl = document.getElementById("root");
