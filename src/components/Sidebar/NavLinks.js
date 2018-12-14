@@ -8,7 +8,7 @@ export default {
 		},
         {
             "menu_title": "Video",
-            "menu_icon": "zmdi zmdi-view-dashboard",
+            "menu_icon": "zmdi zmdi-play-circle-outline",
             "path": "/video",
             // "child_routes": [
             //
@@ -16,13 +16,13 @@ export default {
         },
         {
             "menu_title": "Quản lý cảnh báo",
-            "menu_icon": "zmdi zmdi-view-dashboard",
+            "menu_icon": "zmdi zmdi-minus-circle-outline",
             "path": "/app/report"
         },
 
         {
             "menu_title": "Quản lý sai phạm",
-            "menu_icon": "zmdi zmdi-view-dashboard",
+            "menu_icon": "zmdi zmdi-close-circle-o",
             "child_routes": [
             ]
 		}
