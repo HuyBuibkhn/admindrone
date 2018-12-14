@@ -15,7 +15,7 @@ import {
 const Dashboard = ({ match }) => (
    <div className="dashboard-wrapper">
       <Switch>
-         <Redirect exact from={`${match.url}/`} to={`${match.url}/ecommerce`} />
+         <Redirect exact from={`${match.url}/`} to={`${match.url}/admin`} />
          <Route path={`${match.url}/ecommerce`} component={AsyncEcommerceDashboardComponent} />
          <Route path={`${match.url}/saas`} component={AsyncSaasDashboardComponent} />
          <Route path={`${match.url}/agency`} component={AsyncAgencyDashboardComponent} />

@@ -2,26 +2,36 @@
 export default {
 	category1: [
 		{
-			"menu_title": "sidebar.dashboard",
+			"menu_title": "Xem trực tiếp video",
 			"menu_icon": "zmdi zmdi-view-dashboard",
 			"child_routes": [
-				{
-					"menu_title": "sidebar.ecommerce",
-					"path": "/app/dashboard/ecommerce",
-				},
-				{
-					"path": "/horizontal/dashboard/saas",
-					"menu_title": "sidebar.saas"
-				},
-				{
-					"path": "/agency/dashboard/agency",
-					"menu_title": "sidebar.agency"
-				},
-				{
-					"path": "/boxed/dashboard/news",
-					"menu_title": "sidebar.news"
-				},
 			]
-		}
+		},
+        {
+            "menu_title": "Quản lý video",
+            "menu_icon": "zmdi zmdi-view-dashboard",
+            "child_routes": [
+                {
+                    "menu_title": "Xem video theo ngày",
+                    "path": "/app/dashboard/ecommerce",
+                },
+                {
+                    "path": "/horizontal/dashboard/saas",
+                    "menu_title": "Xem video theo drone"
+                }
+            ]
+        },
+        {
+            "menu_title": "Quản lý cảnh báo",
+            "menu_icon": "zmdi zmdi-view-dashboard",
+            "path": "/app/dashboard/lala"
+        },
+
+        {
+            "menu_title": "Quản lý sai phạm",
+            "menu_icon": "zmdi zmdi-view-dashboard",
+            "child_routes": [
+            ]
+        }
 	]
 }
