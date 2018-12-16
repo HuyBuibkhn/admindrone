@@ -30,6 +30,7 @@ export default class VideoLayout extends Component {
             dropdownOpen: false,
             drones: data.drones,
             droneInputSearch: '',
+            selectedDrone: null,
             selectedDroneIndex: 0,
             startDate: new Date(),
             showModalDatePicker: false
@@ -67,9 +68,9 @@ export default class VideoLayout extends Component {
                                 }}/>
                             </InputGroup>
                             {
-                                this.state.drones.filter(drone => drone.code.indexOf(this.state.droneInputSearch) !== -1).map((drone, index) => {
+                                this.state.drones.filter(drone => drone.code.toLowerCase().indexOf(this.state.droneInputSearch.toLowerCase()) !== -1).map((drone, index) => {
                                     return (<DropdownItem
-                                        onClick={() => this.setState({droneInputSearch: '', selectedDroneIndex: index})}
+                                        onClick={() => this.setState({droneInputSearch: '', selectedDroneIndex: this.state.drones.indexOf(drone)})}
                                         key={index}>{`Drone ${drone.id + 1}. Số hiệu: ${drone.code}`}</DropdownItem>)
                                 })
                             }
@@ -166,7 +167,7 @@ export default class VideoLayout extends Component {
                             <table style={{width: '100%'}}>
                                 <tr>
                                     <td width={'70%'}>Mã số</td>
-                                    <td>{selectedDrone.id}</td>
+                                    <td>{selectedDrone.id + 1}</td>
                                 </tr>
                                 <tr>
                                     <td>Số hiệu</td>

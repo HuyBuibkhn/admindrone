@@ -7,6 +7,14 @@ export default {
             "path": "/app/dashboard"
 		},
         {
+            "menu_title": "Xem trực tiếp",
+            "menu_icon": "zmdi zmdi-view-dashboard",
+            "path": "/live",
+            // "child_routes": [
+            //
+            // ]
+        },
+        {
             "menu_title": "Video",
             "menu_icon": "zmdi zmdi-play-circle-outline",
             "path": "/video",
