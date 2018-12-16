@@ -35,7 +35,7 @@ class dashboard extends Component {
                     />
                 </div>
                 <br/>
-                <ul className="list-group col-10 center">
+                <ul className="list-group col-4 ">
                     <li className="list-group-item list-group-item-danger">Cháy rừng 2:00 AM {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
                     <li className="list-group-item list-group-item-danger">Chặt phá 3:00 AM {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
                     <li className="list-group-item list-group-item-danger">Cháy rừng  8:00 AM {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
@@ -43,20 +43,7 @@ class dashboard extends Component {
                     <li className="list-group-item list-group-item-danger">Chặt  phá 11:00 PM {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
                     <li className="list-group-item list-group-item-danger">Cháy rừng  11:30 PM {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
                 </ul>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+
             </div>
 
         );
