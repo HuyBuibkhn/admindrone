@@ -11,7 +11,8 @@ const Dashboard = ({ match }) => (
     <div className="dashboard-wrapper">
         <Switch>
             <Redirect exact from={`${match.url}/`} to={`${match.url}/video`} />
-            <Route path={`${match.url}/video`} component={VideoLayout} />
+            <Route path={`/video`} component={VideoLayout} />
+            {/*<Route path={`${match.url}/`}/>*/}
         </Switch>
     </div>
 );

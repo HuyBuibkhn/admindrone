@@ -21,6 +21,8 @@ import RctDefaultLayout from './DefaultLayout';
 // boxed layout
 import RctBoxedLayout from './RctBoxedLayout';
 import VideoLayout from "./VideoLayout";
+import LiveStream from "Routes/dashboard/livestream";
+import LiveStreamLayout from "./LiveStreamLayout";
 
 /**
  * Initial Path To Check Whether User Is Logged In Or Not
@@ -51,6 +53,7 @@ class App extends Component {
 				<Route path="/agency" component={AgencyLayout} />
 				<Route path="/boxed" component={RctBoxedLayout} />
 				<Route path='/video' component={VideoLayout}/>
+				<Route path='/live' component={LiveStreamLayout}/>
 			</RctThemeProvider>
 		);
 	}

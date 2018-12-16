@@ -49,3 +49,63 @@ body {
     top: 0;
     left: 0;
 }
+
+.table-drone {
+
+}
+
+.table-drone table {
+    width: 100%;
+}
+
+.table-drone td {
+    border: none;
+    padding-left: 10px;
+}
+
+.table-drone th {
+    border: none;
+    padding-left: 10px;
+    color: darkgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+
+.table-drone thead {
+    border-bottom: 1px solid ghostwhite;
+}
+
+.table-drone tr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid ghostwhite;
+    padding: 10px;
+}
+
+.view-live-stream {
+    /*background-color: #4baf58;*/
+    /*border-radius: 30px;*/
+    padding: 3px 10px;
+    color: #7d8189;
+    font-size: 13px;
+}
+
+.view-detail-drone {
+    /*background-color: #4baf58;*/
+    /*border-radius: 30px;*/
+    padding: 3px 10px;
+    color: #7d8189;
+    font-size: 13px;
+}
+
+.my-modal {
+    width: 90vw;   /* Occupy the 90% of the screen width */
+    max-width: 90vw;
+}
+
+.modal-map {
+    width: 65vw;
+    max-width: 65vw;
+    min-width: 65vw;
+}
