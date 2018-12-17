@@ -747,6 +747,7 @@ module.exports = {
     "Xem thống kê" :"Xem thống kê",
 	"Video" : "Video",
     "Quản lý cảnh báo" : "Quản lý cảnh báo",
-    "Quản lý sai phạm" : "Quản lý sai phạm"
+    "Quản lý sai phạm" : "Quản lý sai phạm",
+	"Xem trực tiếp" : "Xem trực tiếp"
 
 }
