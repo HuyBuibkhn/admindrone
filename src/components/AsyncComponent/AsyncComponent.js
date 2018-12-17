@@ -39,6 +39,10 @@ const AsyncReportComponent = Loadable({
     loader: () => import("Routes/dashboard/report/report"),
     loading: () => <RctPageLoader />,
 });
+const  AsyncViolationComponent = Loadable({
+    loader: () => import("Routes/dashboard/violation/violation"),
+    loading: () => <RctPageLoader />,
+});
 
 export {
 	AsyncEcommerceDashboardComponent,
@@ -46,5 +50,6 @@ export {
 	AsyncAgencyDashboardComponent,
 	AsyncNewsDashboardComponent,
     AsyncDashboardComponent,
-    AsyncReportComponent
+    AsyncReportComponent,
+    AsyncViolationComponent
 };

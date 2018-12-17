@@ -8,7 +8,7 @@ export default {
 		},
         {
             "menu_title": "Xem trực tiếp",
-            "menu_icon": "zmdi zmdi-view-dashboard",
+            "menu_icon": "zmdi zmdi-videocam",
             "path": "/live",
             // "child_routes": [
             //
@@ -31,8 +31,7 @@ export default {
         {
             "menu_title": "Quản lý sai phạm",
             "menu_icon": "zmdi zmdi-close-circle-o",
-            "child_routes": [
-            ]
+            "path" : "/app/violation"
 		}
 	]
 }

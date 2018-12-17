@@ -5,7 +5,8 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import {
 
     AsyncDashboardComponent,
-    AsyncReportComponent
+    AsyncReportComponent,
+    AsyncViolationComponent
 } from 'Components/AsyncComponent/AsyncComponent';
 
 const Dashboard = ({ match }) => (
@@ -14,6 +15,7 @@ const Dashboard = ({ match }) => (
         <Switch>
             <Route path={`${match.url}/dashboard`} component={AsyncDashboardComponent} />
             <Route path={`${match.url}/report`} component={AsyncReportComponent} />
+            <Route path={`${match.url}/violation`} component={AsyncViolationComponent} />
         </Switch>
     </div>
 );
