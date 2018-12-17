@@ -23,15 +23,20 @@ import RctBoxedLayout from './RctBoxedLayout';
 import VideoLayout from "./VideoLayout";
 import LiveStream from "Routes/dashboard/livestream";
 import LiveStreamLayout from "./LiveStreamLayout";
+import RctLoginLayout from "./RctLoginLayout";
 
 /**
  * Initial Path To Check Whether User Is Logged In Or Not
  */
-const InitialPath = ({ component: Component, ...rest }) =>
-	<Route
-		{...rest}
-		render={props => <Component {...props} />}
-	/>;
+const InitialPath = ({ component: Component, ...rest }) =><Route
+    {...rest}
+    render={props =>
+        // (getCookie('session_id'))
+        (true)
+            ? <Component {...props} />
+            : <Redirect to={`/login`} />
+    }
+/>;
 
 class App extends Component {
 	render() {
@@ -54,6 +59,7 @@ class App extends Component {
 				<Route path="/boxed" component={RctBoxedLayout} />
 				<Route path='/video' component={VideoLayout}/>
 				<Route path='/live' component={LiveStreamLayout}/>
+                <Route path="/login" component={RctLoginLayout} />
 			</RctThemeProvider>
 		);
 	}

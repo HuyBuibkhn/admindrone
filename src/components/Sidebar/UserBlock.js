@@ -10,10 +10,9 @@ import { NotificationManager } from 'react-notifications';
 
 // components
 import SupportPage from '../Support/Support';
-
+import { Redirect } from 'react-router-dom'
 // redux action
 import { logoutUserFromFirebase } from 'Actions';
-
 // intl messages
 import IntlMessages from 'Util/IntlMessages';
 
@@ -21,15 +20,21 @@ class UserBlock extends Component {
 
 	state = {
 		userDropdownMenu: false,
-		isSupportModal: false
+		isSupportModal: false,
+        redirect: false
 	}
 
-	/**
-	 * Logout User
-	 */
-	logoutUser() {
-		this.props.logoutUserFromFirebase();
-	}
+
+    setRedirect = () => {
+        this.setState({
+            redirect: true
+        })
+    }
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/login' />
+        }
+    }
 
 	/**
 	 * Toggle User Dropdown Menu
@@ -83,14 +88,14 @@ class UserBlock extends Component {
 								/>
 							</div>
 							<div className="user-info">
-								<span className="user-name ml-4">Lucile Beck</span>
+								<span className="user-name ml-4">Admin</span>
 								<i className="zmdi zmdi-chevron-down dropdown-icon mx-4"></i>
 							</div>
 						</DropdownToggle>
 						<DropdownMenu>
 							<ul className="list-unstyled mb-0">
 								<li className="p-15 border-bottom user-profile-top bg-primary rounded-top">
-									<p className="text-white mb-0 fs-14">Lucile Beck</p>
+									<p className="text-white mb-0 fs-14">Admin</p>
 									<span className="text-white fs-14">info@example.com</span>
 								</li>
 								<li>
@@ -102,25 +107,9 @@ class UserBlock extends Component {
 										<IntlMessages id="widgets.profile" />
 									</Link>
 								</li>
-								<li>
-									<Link to={{
-										pathname: '/app/users/user-profile-1',
-										state: { activeTab: 2 }
-									}}>
-										<i className="zmdi zmdi-comment-text-alt text-success mr-3"></i>
-										<IntlMessages id="widgets.messages" />
-										<Badge color="danger" className="pull-right">3</Badge>
-									</Link>
-								</li>
-								<li>
-									<Link to="/app/pages/feedback">
-										<i className="zmdi zmdi-edit text-warning mr-3"></i>
-										<IntlMessages id="sidebar.feedback" />
-										<Badge color="info" className="pull-right">1</Badge>
-									</Link>
-								</li>
 								<li className="border-top">
-									<a href="javascript:void(0)">
+                                    {this.renderRedirect()}
+									<a onClick={this.setRedirect}>
 										<i className="zmdi zmdi-power text-danger mr-3"></i>
 										<IntlMessages id="widgets.logOut" />
 									</a>

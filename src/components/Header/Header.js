@@ -76,12 +76,7 @@ class Header extends Component {
 					<div className="d-flex align-items-center">
 						{(horizontalMenu || agencyMenu) &&
 							<div className="site-logo">
-								<Link to="/" className="logo-mini">
-									<img src={require('Assets/img/appLogo.png')} className="mr-15" alt="site logo" width="35" height="35" />
-								</Link>
-								<Link to="/" className="logo-normal">
-									<img src={require('Assets/img/appLogoText.png')} className="img-fluid" alt="site-logo" width="67" height="17" />
-								</Link>
+								Quản lý rừng
 							</div>
 						}
 						{!agencyMenu &&
@@ -102,16 +97,7 @@ class Header extends Component {
 										</Tooltip>
 									</li>
 								}
-								<li className="list-inline-item search-icon d-inline-block">
-									<SearchForm />
-									<IconButton mini="true" className="search-icon-btn" onClick={() => this.openMobileSearchForm()}>
-										<i className="zmdi zmdi-search"></i>
-									</IconButton>
-									<MobileSearchForm
-										isOpen={isMobileSearchFormVisible}
-										onClose={() => this.setState({ isMobileSearchFormVisible: false })}
-									/>
-								</li>
+								
 							</ul>
 						}
 					</div>
