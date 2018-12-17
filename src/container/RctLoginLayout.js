@@ -64,9 +64,7 @@ class Signin extends Component {
                             <div className="container">
                                 <div className="d-flex justify-content-between">
                                     <div className="session-logo">
-                                        <Link to="/">
-                                            <img src={AppConfig.appLogo} alt="session-logo" className="img-fluid" width="110" height="35" />
-                                        </Link>
+                                        <h1>Quản lý rừng</h1>
                                     </div>
                                 </div>
                             </div>
@@ -78,19 +76,19 @@ class Signin extends Component {
                                 <div className="col-md-6 offset-md-3 mt-50">
                                     <div className="session-body text-center">
                                         <div className="session-head mb-30">
-                                            <h2 className="font-weight-bold">Login Mandexpa</h2>
+                                            <h2 className="font-weight-bold">Đăng nhập trang admin</h2>
                                         </div>
                                         <form onSubmit={(e) => this.onLogin(e)}>
                                             <div className="form-group">
-                                                <label className="font-weight-bold" htmlFor="username">Username</label>
+                                                <label className="font-weight-bold" htmlFor="username">Tài khoản</label>
                                                 <input type="text" className="form-control" name='username' value={this.state.username} onChange={(event) => this.updateLoginDetail(event)} required />
                                             </div>
                                             <div className="form-group">
-                                                <label className="font-weight-bold" htmlFor="password">Password</label>
+                                                <label className="font-weight-bold" htmlFor="password">Mật khẩu</label>
                                                 <input type="password" className="form-control" name='password' value={this.state.password} onChange={(event) => this.updateLoginDetail(event)} required />
                                             </div>
                                             <div className="col-md-6 offset-md-3">
-                                                <button type="submit" className="btn btn-outline-primary">Login</button>
+                                                <button type="submit" className="btn btn-outline-primary">Đăng nhập</button>
                                             </div>
                                         </form>
                                     </div>
