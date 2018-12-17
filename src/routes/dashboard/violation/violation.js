@@ -2,18 +2,19 @@ import React, { Component } from 'react';
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
+import ShowViolation from "./showViolation";
 class violation extends Component {
     constructor(props) {
         super(props);
         this.state = {
             date: new Date(),
-            reporthide : false,
-            listid: "1",
+            violationhide : false,
+            listViolation: "1",
         };
         this.handleChange = this.handleChange.bind(this);
     }
-    clickReport =() =>{
-        this.setState({ reporthide: true });
+    clickViolation =() =>{
+        this.setState({  violationhide: true });
     }
 
     handleChange(date) {
@@ -21,9 +22,9 @@ class violation extends Component {
             date: date
         });
     }
-    onItemClick  =(event) => {
+    onItemClickViolation  =(event) => {
         this.setState({
-            listid : event.currentTarget.dataset.id
+            listViolation : event.currentTarget.dataset.id
         });
     }
 
@@ -46,17 +47,14 @@ class violation extends Component {
                 </div>
                 <br/>
                     <div className="row">
-                        <div className="col-sm-4" onClick={this.clickReport}>
+                        <div className="col-sm-4" onClick={this.clickViolation}>
                             <ul id="list-report">
-                                <li className="list-group-item list-group-item-danger" onClick={this.onItemClick} data-id="41 22.2110, 2 8.4228" >Kiểm lâm : {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
-                                <li className="list-group-item list-group-item-danger"  onClick={this.onItemClick} data-id="42 23.2028, 2 2.3448">Chặt phá 3:00 AM {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
-                                <li className="list-group-item list-group-item-danger" onClick={this.onItemClick} data-id="40 13.1018, 3 4.5008">Cháy rừng  8:00 AM {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
-                                <li className="list-group-item list-group-item-danger" onClick={this.onItemClick} data-id="44 22.2228, 2 6.1228">Cháy rừng 9:00 PM {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
-                                <li className="list-group-item list-group-item-danger" onClick={this.onItemClick} data-id="28 26.1528, 3 3.4788">Chặt  phá 11:00 PM {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
-                                <li className="list-group-item list-group-item-danger" onClick={this.onItemClick} data-id="46 24.1022, 1 5.3998">Cháy rừng  11:30 PM {this.state.date.getDate()}/{this.state.date.getMonth()}/{this.state.date.getFullYear()}</li>
+                                <li className="list-group-item list-group-item-danger" onClick={this.onItemClickViolation} data-id="Nguyễn Đức Bình" >Kiểm lâm : Nguyễn Đức Bình {this.state.date.getDate()}/{this.state.date.getMonth()+1}/{this.state.date.getFullYear()}</li>
+                                <li className="list-group-item list-group-item-danger"  onClick={this.onItemClickViolation} data-id="Đinh Đăng Hiếu">Kiểm lâm : Đinh Đăng Hiếu{this.state.date.getDate()}/{this.state.date.getMonth()+1}/{this.state.date.getFullYear()}</li>
+                                <li className="list-group-item list-group-item-danger" onClick={this.onItemClickViolation} data-id="Nguyễn Đức Hùng">Kiểm lâm : Nguyễn Đức Hùng{this.state.date.getDate()}/{this.state.date.getMonth()+1}/{this.state.date.getFullYear()}</li>
                             </ul>
                         </div>
-                        { this.state.reporthide ? "1" : null }
+                        { this.state. violationhide ? <ShowViolation reson ={this.state.listViolation}  date={this.state.date}/>: null }
                     </div>
 
             </div>
