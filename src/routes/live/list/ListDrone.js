@@ -137,7 +137,7 @@ class ListDrone extends Component {
                                                                 paddingTop: 10,
                                                                 paddingBottom: 10,
                                                                 height: 40,
-                                                                backgroundColor: drone === this.state.selectedDrone ? '#516251' : 'white'
+                                                                backgroundColor: drone === this.state.selectedDrone ? '#e6e6e6' : 'white'
                                                             }} key={index}>
                                                                 <td style={{width: '20%'}}>{`Drone ${drone.id + 1}. Số hiệu: ${drone.code}`}</td>
                                                                 <td style={{

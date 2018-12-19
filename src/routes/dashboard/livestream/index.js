@@ -44,7 +44,8 @@ export default class LiveStream extends Component {
             dronePosition: {
                 bottom: 380,
                 right: 130
-            }
+            },
+            showDetail: true
         };
         this.handleChange = this.handleChange.bind(this);
     }
@@ -140,11 +141,12 @@ export default class LiveStream extends Component {
                                     //     top: 0,
                                     //     left: ((index % 2) * 50) + '%'
                                     // }}
-                                    playing={true}
-                                    muted={true}
-                                    url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                                    url={'http://localhost:3000/video.mp4'}
                                     controls={true}
                                     width={'100%'}
+                                    loop={true}
+                                    playing={true}
+                                    muted={true}
                                     height={'100%'}
                                 />
                             </div>
@@ -162,11 +164,12 @@ export default class LiveStream extends Component {
                                             <div className='player-wrapper'>
                                                 <ReactPlayer
                                                     className='react-player'
-                                                    playing={true}
-                                                    muted={true}
-                                                    url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                                                    url={'http://localhost:3000/video.mp4'}
                                                     controls={true}
                                                     width={'100%'}
+                                                    loop={true}
+                                                    playing={true}
+                                                    muted={true}
                                                     height={'100%'}
                                                 />
                                             </div>
@@ -186,30 +189,40 @@ export default class LiveStream extends Component {
                             // marginTop: 20
                         }}>
                             {/*<div style={{marginTop: 20, display: 'flex', flexDirection: 'column'}}>*/}
-                            <b>Chi tiết:</b>
-                            <img src={imgDrone1} style={{width: 250, height: 140}}/>
-                            <table style={{width: '100%'}}>
-                                <tr>
-                                    <td width={'70%'}>Mã số</td>
-                                    <td>{selectedDrone.id + 1}</td>
-                                </tr>
-                                <tr>
-                                    <td>Số hiệu</td>
-                                    <td>{selectedDrone.code}</td>
-                                </tr>
-                                <tr>
-                                    <td>Năm sản xuất</td>
-                                    <td>{selectedDrone.year}</td>
-                                </tr>
-                                <tr>
-                                    <td>Hãng sản xuất</td>
-                                    <td>DJI (Đài Loan)</td>
-                                </tr>
-                                <tr>
-                                    <td>Thời lượng bay hôm nay (hh:mm:ss)</td>
-                                    <td>{this.calculateFlyTime()}</td>
-                                </tr>
-                            </table>
+                            <div>
+                                <b>Chi tiết: </b>
+                                <a style={{color: '#294bff'}}
+                                   onClick={() => this.setState({showDetail: !this.state.showDetail})}>{this.state.showDetail ? 'Thu nhỏ' : 'Hiển thị đầy đủ'}</a>
+                            </div>
+                            {
+                                this.state.showDetail &&
+                                <img src={imgDrone1} style={{width: 250, height: 140}}/>
+                            }
+                            {
+                                this.state.showDetail &&
+                                <table style={{width: '100%'}}>
+                                    <tr>
+                                        <td width={'70%'}>Mã số</td>
+                                        <td>{selectedDrone.id + 1}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Số hiệu</td>
+                                        <td>{selectedDrone.code}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Năm sản xuất</td>
+                                        <td>{selectedDrone.year}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hãng sản xuất</td>
+                                        <td>DJI (Đài Loan)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thời lượng bay hôm nay (giờ)</td>
+                                        <td>{this.calculateFlyTime()}</td>
+                                    </tr>
+                                </table>
+                            }
                             <br/>
                             {/*</div>*/}
                             <b>Lộ trình bay</b>
@@ -223,16 +236,21 @@ export default class LiveStream extends Component {
                                     <th style={{width: '10%', padding: 5, textAlign: 'center'}}>STT</th>
                                     <th style={{padding: 5, textAlign: 'center'}}>Nội dung</th>
                                     <th style={{textAlign: 'center', padding: 5}}>Thời gian</th>
+                                    <th/>
                                 </tr>
                                 <tr>
                                     <td style={{width: '10%', padding: 0, textAlign: 'center'}}>1</td>
                                     <td>Cháy rừng</td>
-                                    <td style={{width: '30%', textAlign: 'center'}}><a href={""}>03:01</a></td>
+                                    <td style={{width: '30%', textAlign: 'center'}}><a style={{color: '#294bff'}}
+                                                                                       onClick={() => this.seekTo(13)}>00:13</a></td>
+                                    <td><a target={'_blank'} href={'https://www.google.com/maps/@21.7209898,106.1409996,767m/data=!3m1!1e3'}>Bản đồ</a></td>
                                 </tr>
                                 <tr>
                                     <td style={{width: '10%', padding: 0, textAlign: 'center'}}>1</td>
                                     <td>Cháy rừng</td>
-                                    <td style={{width: '30%', textAlign: 'center'}}><a href={""}>03:01</a></td>
+                                    <td style={{width: '30%', textAlign: 'center'}}><a style={{color: '#294bff'}}
+                                                                                       onClick={() => this.seekTo(13)}>00:13</a></td>
+                                    <td><a target={'_blank'} href={'https://www.google.com/maps/@21.7209898,106.1409996,767m/data=!3m1!1e3'}>Bản đồ</a></td>
                                 </tr>
                             </table>
                         </div>
