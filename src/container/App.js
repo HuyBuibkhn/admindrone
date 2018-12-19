@@ -24,6 +24,7 @@ import VideoLayout from "./VideoLayout";
 import LiveStream from "Routes/dashboard/livestream";
 import LiveStreamLayout from "./LiveStreamLayout";
 import RctLoginLayout from "./RctLoginLayout";
+import Video from '../routes/video'
 
 /**
  * Initial Path To Check Whether User Is Logged In Or Not
@@ -57,7 +58,7 @@ class App extends Component {
 				<Route path="/horizontal" component={HorizontalLayout} />
 				<Route path="/agency" component={AgencyLayout} />
 				<Route path="/boxed" component={RctBoxedLayout} />
-				<Route path='/video' component={VideoLayout}/>
+				<Route path='/video' component={Video}/>
 				<Route path='/live' component={LiveStreamLayout}/>
                 <Route path="/login" component={RctLoginLayout} />
 			</RctThemeProvider>
